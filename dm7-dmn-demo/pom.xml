@@ -5,8 +5,6 @@
   <version>0.0.1-SNAPSHOT</version>
   <properties>
   	<version.org.kie>7.4.1.Final</version.org.kie>
-  	<version.junit>4.12</version.junit>
-  	<version.org.hamcrest>1.3</version.org.hamcrest>
   </properties>
   
   <dependencyManagement>
@@ -22,7 +20,6 @@
     </dependencies>
   </dependencyManagement>
   
-  
   <dependencies>
   	<!-- KIE API -->
   	<dependency>
@@ -30,46 +27,8 @@
   		<artifactId>kie-api</artifactId>
   		<scope>provided</scope>
   	</dependency>
-  	
-  	<!-- KIE dependency for DMN -->
-  	<dependency>
-  		<groupId>org.kie</groupId>
-  		<artifactId>kie-dmn-api</artifactId>
-  		<scope>provided</scope>
-  	</dependency>
-  	<dependency>
-  		<groupId>org.kie</groupId>
-  		<artifactId>kie-dmn-core</artifactId>
-  		<scope>provided</scope>
-  	</dependency>
-  	
-  	<!-- Drools dependencies -->
-  	<dependency>
-  		<groupId>org.drools</groupId>
-  		<artifactId>drools-core</artifactId>
-  		<scope>provided</scope>
-  	</dependency>
-  	<dependency>
-  		<groupId>org.drools</groupId>
-  		<artifactId>drools-compiler</artifactId>
-  		<scope>provided</scope>
-  	</dependency>
-  	
-  	<!-- Test dependencies -->
-  	<dependency>
-  		<groupId>junit</groupId>
-  		<artifactId>junit</artifactId>
-  		<version>${version.junit}</version>
-  		<scope>test</scope>
-  	</dependency>
-  	<dependency>
-  		<groupId>org.hamcrest</groupId>
-  		<artifactId>hamcrest-library</artifactId>
-  		<version>${version.org.hamcrest}</version>
-  		<scope>test</scope>
-  	</dependency>
-  	
   </dependencies>
+  	
   <build>
     <plugins>
       <plugin>
