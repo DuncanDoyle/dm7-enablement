@@ -5,6 +5,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <properties>
   	<version.org.kie>7.4.1.Final</version.org.kie>
+  	<version.ch.qos.logback>1.2.3</version.ch.qos.logback>
   	<version.junit>4.12</version.junit>
   	<version.org.hamcrest>1.3</version.org.hamcrest>
   </properties>
@@ -54,6 +55,20 @@
   		<artifactId>drools-compiler</artifactId>
   		<scope>test</scope>
   	</dependency>
+  	
+  	<!-- 3rd party -->
+  	<dependency>
+		<groupId>ch.qos.logback</groupId>
+		<artifactId>logback-core</artifactId>
+		<version>${version.ch.qos.logback}</version>
+		<scope>runtime</scope>
+	</dependency>
+	<dependency>
+		<groupId>ch.qos.logback</groupId>
+		<artifactId>logback-classic</artifactId>
+		<version>${version.ch.qos.logback}</version>
+		<scope>runtime</scope>
+	</dependency>
   	
   	<!-- Test dependencies -->
   	<dependency>
