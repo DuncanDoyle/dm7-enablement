@@ -1,0 +1,14 @@
+package com.redhat.dm7.demo.ruleunits.chained.units;
+unit AdultUnit
+
+import com.redhat.dm7.demo.ruleunits.chained.model.Person;
+import com.redhat.dm7.demo.ruleunits.chained.model.Adult;
+
+rule "Is Adult"
+when
+	$p: Person(age >=18) from persons
+then
+	//TODO shouldn't we also add this to a DataSource?
+	System.out.println($p.getName() + " is an Adult.");
+	insert(new Adult($p));
+end

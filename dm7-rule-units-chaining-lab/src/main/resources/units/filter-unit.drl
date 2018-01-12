@@ -1,0 +1,14 @@
+package com.redhat.dm7.demo.ruleunits.chained.units;
+unit FilterUnit
+
+import com.redhat.dm7.demo.ruleunits.chained.model.Person;
+
+
+//Filter all persons where their name starts with an M.
+rule "Filter persons with name that starts with the letter M"
+when
+	$p:Person(name str[startsWith] "D") from persons
+then
+	System.out.println("Deleting person: " + $p.getName() + ". Sorry man, your name starts with a 'D' ....");
+	delete($p);
+end

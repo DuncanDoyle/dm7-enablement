@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kmodule xmlns="http://jboss.org/kie/6.0.0/kmodule">
+    <kbase name="units" equalsBehavior="equality" eventProcessingMode="cloud" packages="units">
+        <ksession name="ksession-units" default="true" type="stateful" />
+    </kbase>
+</kmodule>

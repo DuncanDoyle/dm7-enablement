@@ -1,0 +1,16 @@
+package com.redhat.dm7.demo.ruleunits.chained.units;
+unit OutputUnit
+
+import com.redhat.dm7.demo.ruleunits.chained.model.Person;
+import com.redhat.dm7.demo.ruleunits.chained.model.Adult;
+
+global java.util.Set filteredAdults;
+
+rule "Add filtered adults to output"
+when
+	$p:Person() from persons
+	Adult(person == $p)
+then
+	System.out.println("Adding " + $p.getName() + " to the output set.");
+	filteredAdults.add($p);
+end

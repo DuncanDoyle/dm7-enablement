@@ -1,0 +1,21 @@
+package com.redhat.dm7.demo.ruleunits.chained.units;
+unit OrchestrationUnit
+
+rule "Schedule units."
+when
+then
+	System.out.println("Scheduling units.");
+	
+	System.out.println("Scheduling filter-unit.");
+ 	drools.run( FilterUnit.class );
+	
+	Thread.sleep(1000L);
+	
+	System.out.println("Scheduling adult-unit.");
+	drools.run ( AdultUnit.class );
+	
+	System.out.println("Scheduling output-unit.");
+	drools.run ( OutputUnit.class );
+	
+end
+
