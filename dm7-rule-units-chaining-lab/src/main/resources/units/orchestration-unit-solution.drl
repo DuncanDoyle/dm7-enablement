@@ -1,0 +1,23 @@
+package com.redhat.dm7.demo.ruleunits.chained.units;
+unit OrchestrationUnitSolution
+
+rule "Schedule units solution."
+when
+then
+	System.out.println("Scheduling units.");
+	/*
+	 * Schedule the execution of the rule-units so that the units run in the order: FilterUnit, AdultUnit, OutputUnit.
+	 */
+	System.out.println("Scheduling filter-unit.");
+ 	drools.run( FilterUnit.class );
+	
+	Thread.sleep(1000L);
+	
+	System.out.println("Scheduling adult-unit.");
+	drools.run ( AdultUnit.class );
+	
+	System.out.println("Scheduling output-unit.");
+	drools.run ( OutputUnit.class );
+	
+end
+
