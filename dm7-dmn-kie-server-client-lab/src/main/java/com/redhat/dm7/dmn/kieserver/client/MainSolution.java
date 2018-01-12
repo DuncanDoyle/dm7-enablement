@@ -43,6 +43,7 @@ public class MainSolution {
 		
 		/*
 		 *  Create a DMNContext and set the "Age" and "had previous incidents"
+		 *  The "Age" should be set to 23, "had previous incidents" should be set to false.
 		 */
 		//DMNContext dmnContext = ...
 		

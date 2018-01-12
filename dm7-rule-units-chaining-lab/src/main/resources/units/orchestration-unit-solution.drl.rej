@@ -1,5 +1,5 @@
 package com.redhat.dm7.demo.ruleunits.chained.units;
-unit OrchestrationUnitSolution
+unit OrchestrationUnit
 
 rule "Schedule units solution."
 when

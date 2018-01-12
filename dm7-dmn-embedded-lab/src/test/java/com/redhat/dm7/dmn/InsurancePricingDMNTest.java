@@ -55,10 +55,13 @@ public class InsurancePricingDMNTest {
 		/*
 		 * Get the DMNDecisionResult "Insurance Total Price"
 		 */
-		//DMNDecisionResult decisionResult = ...
+		DMNDecisionResult decisionResult = null;
 		
 		
 		//Assert the result
+		assertThat(decisionResult, notNullValue());
+		//Assert that the result has the correct value.
+		assertThat(decisionResult.getResult(), is(BigDecimal.valueOf(2000)));
 		
 		
 	}
