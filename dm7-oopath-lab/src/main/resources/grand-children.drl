@@ -1,0 +1,21 @@
+package com.redhat.dm7.oopath;
+
+
+import com.redhat.dm7.oopath.model.Person;
+
+rule "Find my grandchildren"
+when
+	$p:Person()
+	$child: Person() from $p.getChildren()
+	$grandChild: Person() from $child.getChildren()
+then
+	System.out.println($grandChild.getName() + " is a grandchild of " + $p.getName());
+end
+
+rule "Find my grandchildren OOPath"
+when
+	//Implement the rule above with an OOPath oneliner.
+then
+	//System.out.println("OOPath: " + $grandChild.getName() + " is a grandchild of " + $p.getName());
+end
+
